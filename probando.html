@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    valor 01: <input type="number" name="v1" id="v1"><br>
+    valor 02: <input type="number" name="v2" id="v2"><br>
+    resultado: <input type="number" name="res" id="res"><br>
+    <button onclick="calcular();">calcular</button>
+    <script type="text/javascript">
+        var nom="";
+        var num=0;
+        const iva=0.19;
+        function calcular(){
+            let v1=document.getElementById('v1').value;
+            let v2=document.getElementById('v2').value;
+            let vv1=parseFloat(v1,10);
+            let vv2=parseFloat(v2,10);
+            let res=vv1+vv2;
+            document.getElementById('res').value=res.toFixed(2);
+            nom="pedro  es el 'mejor' jugando a la pelota";
+        }
+
+        funtion otra(){
+            calcular();
+        }
+
+    </script>
+
+</body>
+</html>
