@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+</head>
+<body>
+	<h1>ejemplo 01 javaScript</h1>
+	<br>
+	<p id="demo" name="" class="">texto</p><br>
+	<button onclick="document.getElementById('demo').innerHTML='Hola Mundo...!!'; ">cambiar</button><br><br>
+	<!-- 
+		<button onclick="document.getElementById('demo').innerHTML='Hola Mundo...!!'; ">cambiar</button>
+		<button onclick="document.getElementByName('demo')[0].innerHTML='Hola Mundo...!!'; ">cambiar</button>
+		<button onclick="document.getElementByClassName('demo')[0].innerHTML='Hola Mundo...!!'; ">cambiar</button>
+		<button onclick="document.getElementByTagName('demo')[0].innerHTML='Hola Mundo...!!'; ">cambiar</button>
+	-->
+	<br>
+	valor 01: <input type="text" name="v1" id="v1"><br>
+	valor 02: <input type="text" name="v2" id="v2"><br>
+	resultado: <input type="text" name="res" id="res"><br>
+	<button onclick="calcular();">calcular</button>
+	
+
+	<script type="text/javascript">
+
+		function calcular(){
+			let v1=document.getElementById('v1').value;
+			let v2=document.getElementById('v2').value;
+			let vv1=parseInt(v1,10);
+			let vv2=parseInt(v2,10);
+			let res=vv1+vv2;
+			document.getElementById('res').value=res;
+			
+			let rezz= 2*Math.PI*radio;
+			let v4=parseFloat(v2,10);
+		}
+		
+
+	</script>
+</body>
+</html>
