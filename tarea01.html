@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1>ejercicios calculadora</h1>
+	<br>
+	valor 01: <input type="text" name="v1" id="v1"><br>
+	valor 02: <input type="text" name="v2" id="v2"><br>
+	resultado: <input type="text" name="v3" id="v3"><br>
+	<button onclick="sum();">sumar</button><br>
+	<button onclick="res();">restar</button><br>
+	<button onclick="div();">multiplicar</button><br>
+	<button onclick="mul();">dividir</button><br>
+
+	<script type="text/javascript">
+
+		function sum(){
+			let v1=document.getElementById('v1').value;
+			let v2=document.getElementById('v2').value;
+			let xx1=parseInt(v1,10)+parseInt(v2,10);
+			document.getElementById('v3').value=xx1;
+		}
+
+		function res(){
+
+		}
+
+		function div(){
+
+		}
+
+		function mul(){
+
+		}
+	</script>
+</body>
+</html>
