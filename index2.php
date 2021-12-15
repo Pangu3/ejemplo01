@@ -5,7 +5,8 @@
 <meta charset="UTF-8">
 </head>
 <body>
-
+    <h1>ejercicios desarrollados en clases</h1>
+    <br>
 <?php 
 //Creamos Nuestra Función
 function lista_archivos(){ //La función recibira como parametro un carpeta
