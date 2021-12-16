@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>												<!--i++ significa que se incrementara sumandole 1-->
+</head>															<!--i-- significa que le resta 1 al valor de i-->
+<body>															<!--i=i+2 sumandole 2 al valor de i-->
+	<h1>bucles</h1>
+	<br>
+	<p>
+		<button onclick="repetir01();">activar</button>
+	</p>
+
+	<script type="text/javascript">								
+		function repetir01(){									/* 		15:2=7 		*/
+			let i;												/*  	1     		*/
+			for (i = 0; i <4; i++){
+				let agno=prompt("ingrese año");
+				let resto=(parseInt(agno)%4);
+				alert("resto: "+resto);
+				if(resto==0){
+					document.write("año bisiesto<br>");
+				}else{
+					document.write("año normal<br>");
+				}
+				/*document.write("iteracion: "+i+"<br>");
+				alert("valor de variable 'i': "+i);*/
+			}
+			document.write("fin de ciclo for");
+		}
+
+	</script>
+</body>
+</html>
