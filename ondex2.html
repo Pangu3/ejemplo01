@@ -1,33 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio Bucles</title>
 </head>
 <body>
-    <h1>Bucles</h1>
+    <h1>Multiplicación</h1>
     <br>
     <p>
-        <button onclick="repetir01();">activar</button>
+        <button onclick="repetir03();">activar</button>
     </p>
     <script type="text/javascript">
+/*
         function repetir01(){
-            for (var i = 0; i <4; i++){
-                let año=prompt("ingrese año");
-                let resto=(parseInt(año)%4);
-                alert("resto: "+resto);
-                if(resto==0){
-                    document.write("año bisiesto");
-                } else{
-                    document.write("año normal");
-
-                }
-
+            let v1=parseInt(prompt("ingrese numero"));
+            for (let i = 1; i <11; i++){
+                 let res=v1*i;
+                 document.write(v1+" * "+i+" = "+res+"<br>");
             }
-            document.write("fin de ciclo for")
+            document.write("________________________________________<br>");
         }
+
+        function repetir02(){
+            let x=1;
+            let v1=prompt("ingrese numero");
+            while (x<11){
+                let vv1=v1*x;
+                document.write(v1+" * "+x+" = "+vv1+" <br> ");
+                x++;
+            }
+        }*/
+   
+        function repetir03(){
+            let x=1;
+            let v1=parseInt(prompt("ingrese numero"));
+            do{
+                let vv1=v1*x;
+                document.write(v1+" * "+x+" = "+vv1+" <br> ");
+                x++;
+            }while (x<11);
+        }
+
+    
+
     </script>
+
+
 </body>
 </html>
