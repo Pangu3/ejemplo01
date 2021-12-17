@@ -10,6 +10,7 @@
 	<br>
 	ingrese valor:<input type="text" name="num" id="num"><br>
 	<button onclick="agregar();">agregar</button><br>
+	<button onclick="orden();">buscar menor</button>
 	<button onclick="buscaMenor();">buscar menor</button>
 	<span id="res"></span>
 	<p id="lista"></p>
@@ -18,6 +19,10 @@
 		let nomina=[];
 		function buscaMenor(){
 
+		}
+		function orden(){
+			nomina.sort();
+			mostrar();
 		}
 
 		function agregar(){
