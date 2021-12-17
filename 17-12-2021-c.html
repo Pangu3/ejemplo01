@@ -10,15 +10,21 @@
 	<br>
 	ingrese valor:<input type="text" name="num" id="num"><br>
 	<button onclick="agregar();">agregar</button><br>
-	<button onclick="orden();">buscar menor</button>
-	<button onclick="buscaMenor();">buscar menor</button>
-	<span id="res"></span>
+	<button onclick="orden();">ordenar</button><br>
+	<button onclick="buscaMenor();">buscar menor</button><br>
+	<span id="res"></span><br>
 	<p id="lista"></p>
 
 	<script type="text/javascript">
 		let nomina=[];
 		function buscaMenor(){
-
+			let menor=parseInt(nomina[0]);
+			for (var i = 1; i <nomina.length; i++) {
+				if(menor>parseInt(nomina[i])){
+					menor=parseInt(nomina[i]);
+				}
+			}
+			document.getElementById("res").innerHTML="el numero menor es: "+menor;
 		}
 		function orden(){
 			nomina.sort();
