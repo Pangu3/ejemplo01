@@ -10,27 +10,57 @@
 	<br>
 	<p>
 		ingrese nombre: <input type="text" name="nom" id="nom"><br>
-		<button onclick="agregar();">ingresar</button>
+		<button onclick="agregar();">ingresar</button><br>
+		<button onclick="kill();">eliminar el ultimo elemento agregado</button><br>
+		<button onclick="sacar();">eliminar el primer elemento agregado</button><br>
+		
+		ingrese posición a modificar: <input type="text" name="po" id="po"><br>
+		ingrese nuevo valor : <input type="text" name="va" id="va"><br>
+		<button onclick="modificar();">modificar</button><br>
+
+		ingrese posición a eliminar: <input type="text" name="pos" id="pos"><br>
+		<button onclick="matar();">modificar</button><br>
 	</p>
 	<p id="ar">
-
-
 	</p>
 	<script type="text/javascript">
 		var arreglo=[];
+		function matar(){
+			let pos=document.getElementById("pos").value;
+			arreglo.splice(pos,1);
+			llenar();
+		}
+
+		function modificar(){
+			let va=document.getElementById("va").value;
+			let po=document.getElementById("po").value;
+			arreglo[po]=va;
+			llenar();
+		}
+
 		function agregar(){
 			let v1=document.getElementById("nom").value;
 			arreglo.push(v1);
 			document.getElementById("nom").value="";
 			llenar();
 		}
+
+		function kill(){
+			arreglo.pop();
+			llenar();
+		}
+		function sacar(){
+			arreglo.shift();
+			llenar();
+		}
+
+		
 		function llenar(){
 			let fragmento="";
 			fragmento="<table border='1'>";
 			for (var i = 0; i < arreglo.length; i++) {
-				fragmento+="<tr><td>"+arreglo[i]+"</td></tr>";
-			  //fragmento=fragmento+"<tr><td>"+arreglo[i]+"</td></tr>";
-			}
+				fragmento+="<tr><td>"+i+" - "+arreglo[i]+"</td></tr>";
+			} //fragmento=fragmento+"<tr><td>"+arreglo[i]+"</td></tr>";
 			fragmento+="</table>";
 			document.getElementById('ar').innerHTML=fragmento;
 		}
