@@ -19,12 +19,17 @@
 		<button onclick="modificar();">modificar</button><br>
 
 		ingrese posición a eliminar: <input type="text" name="pos" id="pos"><br>
-		<button onclick="matar();">modificar</button><br>
+		<button onclick="matar();">eliminar</button><br>
+		<button onclick="ordenar();">ordenar</button><br>
 	</p>
 	<p id="ar">
 	</p>
 	<script type="text/javascript">
 		var arreglo=[];
+		function ordenar(){
+			arreglo.sort();
+			llenar();
+		}
 		function matar(){
 			let pos=document.getElementById("pos").value;
 			arreglo.splice(pos,1);
@@ -54,7 +59,6 @@
 			llenar();
 		}
 
-		
 		function llenar(){
 			let fragmento="";
 			fragmento="<table border='1'>";
