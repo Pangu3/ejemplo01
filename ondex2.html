@@ -10,7 +10,7 @@
     <br>
     <p>
 
-        <button onclick="multi();">activar</button>
+        <button onclick="calcular2();">activar</button>
 
     </p>
     <script type="text/javascript">
@@ -48,9 +48,31 @@
             for (var i = 0; i <v2; i++) {
                 res=res+v1;
             }
+            document.write("resultado: "+res+"<br>"); 
+        }
+
+
+        function calcular2(){
+            let v1=parseInt(prompt('ingrese un valor:'));
+            let v2=parseInt(prompt('ingrese un valor:'));
+            let res=0;
+            for (let cont1=0; cont1 <v1;cont++){
+                res=res+v2;
+            }
+            document.write('el resultado de '+v1+' x '+v2+' es  '+res);
+        }
+
+        function calcular3(){
+            let v1=parseInt(prompt('ingrese un valor:'));
+            let v2=parseInt(prompt('ingrese un valor:'));
+            let res=0;
             
-            document.write("resultado: "+res+"<br>");
-            
+            let cont=0;
+            while (cont<v1){
+                res=res+v2;
+                cont++;
+            }
+            document.write('el resultado de '+v1+' x '+v2+' es  '+res);
         }
     </script>
 
