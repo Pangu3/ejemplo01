@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 04</title>
+</head>
+<body>
+    <h1>Funciones</h1><br><br>
+    Ingrese cantidad de hijos:<input type="text" name="v1" id="v1"></body><br>
+    <button onclick="llamar();">Activar</button><br>
+    <p id="resultado"></p>
+    <script type="text/javascript">
+        function llamar() {
+            let vv1 = document.getElementById('v1').value;
+            document.getElementById('resultado').innerHTML = evaluar2(vv1);
+        }
+        function evaluar(vv1) {
+            let valor="";
+            if(vv1 <= 0){
+                valor= "no califica para el bono";
+                return valor;
+            } else if (vv1 <= 3) {
+                valor = "su bono sera 5%";
+                return valor;
+            }else if (vv1 <= 6) {
+                valor = "su bono sera 8%";
+                return valor;
+            }else {
+                valor = "su bono sera 10%";
+                return valor;
+            }
+        }
+        function evaluar2(vv1) {
+            let valor="";
+            if(vv1 <= 0){
+                valor= "no califica para el bono";
+            } else if (vv1 <= 3) {
+                valor = "su bono sera 5%";
+            }else if (vv1 <= 6) {
+                valor = "su bono sera 8%";
+            }else {
+                valor = "su bono sera 10%";
+            }
+            return valor;
+        }
+    </script>
+</body>
+</html>
