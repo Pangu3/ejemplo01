@@ -1,80 +1,26 @@
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-</head>
+    <title>tare sincronica m2c8</title>
+</head> 
 <body>
-    <h1>Promedio tiempo de los atletas</h1>
-    <br>
-    <p>
-
-        <button onclick="calcular2();">activar</button>
-
-    </p>
+    <h1>m2c8</h1>
+    ingrese un valor<input type="text" name="valor" id="valor"><br>
+    <button onclick="calcular();">calcular iva</button><br>
+    <p id="resp"></p>
     <script type="text/javascript">
-
+           
         function calcular(){
-            let th=0,tm=0,ch=0,cm=0;
-            let op="s";
-            while(op=="s"){
-                let t=parseInt(prompt("ingrese tiempo del competidor: "));
-                let s=prompt("ingrese sexo del competidor (H= hombres // M=mujeres):");
-                if(s=="m" || s=="M"){
-                    tm=tm+t;
-                    cm++;
-                }else if (s=="h" || s=="H"){
-                    th=th+t;
-                    ch++;
-                }else{
-                    alert("opcion no valida intentelo nuevamente...!!!!")
-                }
-                op=prompt("desea ingresar otro registro(s/n): ");
-            }
-            let pm=tm/cm;
-            let ph=th/ch;
-            document.write("promedio de tiempo de mujeres: "+pm+"<br>");
-            document.write("promedio de tiempo de hombres: "+ph+"<br>");
-            document.write("cm: "+cm+" // "+tm+"<br>");
-            document.write("cm: "+ch+" // "+th+"<br>");
-            
+            let v1=document.getElementById('valor').value;
+            document.getElementById('resp').innerHTML=iva(v1);
         }
-
-        function multi(){
-            let v1=parseInt(prompt("ingrese primer valor: "));
-            let v2=parseInt(prompt("ingrese segundo valor: "));
-            let res=0;
-            for (var i = 0; i <v2; i++) {
-                res=res+v1;
-            }
-            document.write("resultado: "+res+"<br>"); 
-        }
-
-
-        function calcular2(){
-            let v1=parseInt(prompt('ingrese un valor:'));
-            let v2=parseInt(prompt('ingrese un valor:'));
-            let res=0;
-            for (let cont1=0; cont1 <v1;cont++){
-                res=res+v2;
-            }
-            document.write('el resultado de '+v1+' x '+v2+' es  '+res);
-        }
-
-        function calcular3(){
-            let v1=parseInt(prompt('ingrese un valor:'));
-            let v2=parseInt(prompt('ingrese un valor:'));
-            let res=0;
-            
-            let cont=0;
-            while (cont<v1){
-                res=res+v2;
-                cont++;
-            }
-            document.write('el resultado de '+v1+' x '+v2+' es  '+res);
+        function iva(v1){
+            let res=parseInt(v1)*0.19;
+            let res2=parseInt(v1)*1.19;
+            let respuesta="iva:"+res+"valor total :"+res2;
+            return respuesta;
         }
     </script>
-
 </body>
-</html>  
+</html>
