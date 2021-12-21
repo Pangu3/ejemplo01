@@ -12,6 +12,7 @@
 	<button onclick="agregar();">agregar</button><br>
 	<button onclick="orden();">ordenar</button><br>
 	<button onclick="buscaMenor();">buscar menor</button><br>
+	<button onclick="mostrar44();">muestra44</button><br>
 	<span id="res"></span><br>
 	<p id="lista"></p>
 
@@ -46,6 +47,16 @@
 			}
 			fragmento+="</table>";
 			document.getElementById('lista').innerHTML=fragmento;
+		}
+
+		function mostrar44(){
+			
+			for (var i = 0; i < 20; i+=4) {
+				document.write(i+"<br>");
+				document.write((i+1)+"<br>");
+				document.write((i+2)+"<br>");
+				document.write((i+3)+"<br>");
+			}
 		}
 	</script>
 </body>
