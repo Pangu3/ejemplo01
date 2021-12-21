@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>manejo de funciones</title>
+</head>
+<body>
+	<h1>funciones</h1><br>
+	valor 1: <input type="text" name="v1" id="v1"><br>
+	valor 2: <input type="text" name="v2" id="v2"><br>
+	<button onclick="llamar();">activar</button>
+	<p id="resul"></p>
+	<script type="text/javascript">
+		function llamar(){
+			let va1=parseInt(document.getElementById('v1').value);
+			let va2=parseInt(document.getElementById('v2').value);
+			multiplica(va1,va2);
+		}
+		function multiplica(x1,x2){
+			let res=0;
+			for (var i = 0; i < x2; i++) {
+				res+=x1;
+			}
+			document.getElementById('resul').innerHTML=res;
+		}
+	</script>
+</body>
+
+</html>
