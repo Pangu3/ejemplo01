@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ejemplo de funcionalidades</title>
+</head>
+<body>
+		<h1>calculos de circunferencia</h1><br>
+		ingrese Radio: <input type="text" name="ra" id="ra"><br>
+		<button onclick="calcular();">calcular</button>
+		<span><h3>resultados</h3></span><br>
+		<span id="dia"></span><br>
+		<span id="per"></span><br>
+		<span id="are"></span><br>
+
+		<script type="text/javascript">
+
+			function calcular(){
+				let ra=document.getElementById('ra').value;
+				document.getElementById('dia').innerHTML="diametro: "+diametro(ra);
+				document.getElementById('per').innerHTML="perimetro: "+perimetro(ra);
+				document.getElementById('are').innerHTML="area: "+area(ra);
+			}
+
+			function diametro(ra){
+				let res=2*parseInt(ra);
+				return res;
+			}
+			function perimetro(ra){
+				let res= 2*Math.PI*parseInt(ra);
+				return res;
+			}
+			function area(ra){
+				let res=Math.PI*(parseInt(ra)**2);//Math.PI*(parseInt(ra)*parseInt(ra));
+				return res;
+			}
+
+		</script>
+</body>
+</html>
