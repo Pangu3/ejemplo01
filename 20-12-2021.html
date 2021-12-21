@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1>la bodega del juan</h1>
+	<br>
+	<p>
+		nombre<input type="text" name="nom" id="nom"><br>
+		familia<input type="text" name="fam" id="fam"><br>
+		valor unitario<input type="text" name="vun" id="vun"><br>
+		cantidad<input type="text" name="can" id="can"><br>
+		<button onclick="agregar();">insertar</button><br>
+		<button onclick="calcular();">calcular</button>
+	</p>
+	<p id="lista">
+
+	</p>
+	<p id="result">
+
+	</p>
+	<script type="text/javascript">
+		var nombres=[];
+		var familias=[];
+		var valores=[];
+		var cantidades=[];
+			function agregar(){
+				let no=document.getElementById("nom").value;
+				let fa=document.getElementById("fam").value;
+				let vu=parseInt(document.getElementById("vun").value);
+				let ca=parseInt(document.getElementById("can").value);
+				nombres.push(no);
+				familias.push(fa);
+				valores.push(vu);
+				cantidades.push(ca);
+				document.getElementById("nom").value="";
+				document.getElementById("fam").value="";
+				document.getElementById("vun").value="";
+				document.getElementById("can").value="";
+				mostrar();
+			}
+
+		function mostrar(){
+			let fragmento="";
+			fragmento="<table border='1'>";
+			fragmento+="<tr>";
+			fragmento+="<td>ID</td>";
+			fragmento+="<td>nombre</td>";
+			fragmento+="<td>familia</td>";
+			fragmento+="<td>Valor Un.</td>";
+			fragmento+="<td>cantidad</td>";
+			fragmento+="</tr>";
+			for (var i = 0; i < nombres.length; i++) {
+				fragmento+="<tr>";
+				fragmento+="<td>"+i+"</td>";
+				fragmento+="<td>"+nombres[i]+"</td>";
+				fragmento+="<td>"+familias[i]+"</td>";
+				fragmento+="<td>"+valores[i]+"</td>";
+				fragmento+="<td>"+cantidades[i]+"</td>";
+				fragmento+="</tr>";
+			}
+			fragmento+="</table>";
+			document.getElementById('lista').innerHTML=fragmento;
+		}
+
+		function calcular(){
+			let acum=0;
+			let stock=0;
+			for (var i = 0; i < nombres.length; i++) {
+				acum+=parseInt(valores[i])*parseInt(cantidades[i]);
+				stock+=parseInt(cantidades[i]);
+			}
+			let txt="<h3>resultado</h3><br> cantidad de productos en stock: "+stock;
+			txt+="<br> valor de productos en Stock: "+acum;
+			document.getElementById('result').innerHTML=txt;
+		}
+	</script>
+</body>
+</html>
